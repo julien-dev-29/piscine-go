@@ -1,12 +1,9 @@
 package piscine
 
-import "fmt"
-
 func BasicAtoi(s string) int {
 	res := 0
-	for i := range s {
-		res = int(rune(s[i] - '0'))
-		fmt.Println(res)
+	for _, c := range s {
+		res = res*10 + int(c-'0')
 	}
 	return res
 }
