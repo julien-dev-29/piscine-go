@@ -6,7 +6,7 @@ func Capitalize(s string) string {
 		if i == 0 && isLower(rs[i]) {
 			rs[i] = rs[i] - 32
 		}
-		if i > 0 && !isAlphanumeric(rs[i-1]) && isLower(rs[i]) {
+		if i > 0 && !isAlpha(rs[i-1]) && isLower(rs[i]) {
 			rs[i] = rs[i] - 32
 		}
 	}
@@ -21,7 +21,7 @@ func isLower(r rune) bool {
 	}
 }
 
-func isAlphanumeric(r rune) bool {
+func isAlpha(r rune) bool {
 	if (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z') {
 		return true
 	} else {
