@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.IsLower("hello"))
-	fmt.Println(piscine.IsLower("hello!"))
+	a := []int{1, 2, 3, 4, 5, 6}
+	result := piscine.Map(piscine.IsPrime, a)
+	fmt.Println(result)
 }
